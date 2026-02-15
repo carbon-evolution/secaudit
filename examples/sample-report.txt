@@ -1,0 +1,48 @@
+
+---
+
+# 📁 File 2: `examples/sample-report.txt`
+
+> This is a **realistic example** of what users will see.
+
+```text
+========================================
+        SYSTEM SECURITY AUDIT
+        Host: echelon-delta
+        OS: Fedora Linux 42
+        Date: Sun Feb 15 23:18:54 CST 2026
+========================================
+
+=== FIREWALL CHECK ===
+[PASS] Firewalld is active
+
+=== FAIL2BAN CHECK ===
+[PASS] Fail2Ban running
+[WARN] No active jails configured
+
+=== OPEN PORTS ===
+tcp   LISTEN 0      4096    127.0.0.1:631
+tcp   LISTEN 0      4096    127.0.0.53:53
+tcp   LISTEN 0      4096    0.0.0.0:5355
+
+=== SECURITY UPDATE CHECK ===
+[PASS] No outstanding security advisories
+
+=== OPENSCAP COMPLIANCE & VULNERABILITY SCAN ===
+[PASS] OpenSCAP scan completed
+[INFO] HTML Report: oscap-report-2026-02-15_23-18-54.html
+
+=== OPENSCAP HIGH / CRITICAL FINDINGS ===
+[FAIL] High/Critical findings detected
+Ensure SSH root login is disabled
+Ensure password reuse is limited
+
+========================================
+RISK SUMMARY
+========================================
+Calculated Risk Score: 45 / 100
+Overall Risk Level: MEDIUM
+
+Audit complete.
+Reports saved in: ~/security-audit-reports
+========================================
