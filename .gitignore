@@ -1,0 +1,11 @@
+# Security Audit Reports
+security_audit_*.txt
+oscap-results-*.xml
+oscap-report-*.html
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
